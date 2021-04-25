@@ -42,17 +42,17 @@ def load_animation():
 def mainMenu():
     while True:
         # !conditions
-        print("-------- MAIN MENU -------- \n")
-        print("Hi, What do you want me to do? :")
+        print("-------------- MAIN MENU ---------------- \n")
+        print("Hi (◠‿◠) , What do you want me to do? ")
         print("Enter 'A or a' Dice roll.")
         print("Enter 'B or b' Guessing the number game.")
         print("Enter 'C or c' Random password generator.")
         print("Enter 'E or e' Exit")
-        print("--------------------------")
+        print("-----------------------------------------")
 
         # !choose
         print("\n")
-        choose = input("Enter your choice: ")
+        choose = input("Enter your choice (͠≖ ͜ʖ͠≖): ")
         if choose == "A" or choose == "a":
             load_animation()
             diceRoller()
@@ -63,10 +63,11 @@ def mainMenu():
             load_animation()
             randPassword()
         elif choose == "E" or choose == "e":
-            print("Quitting")
+            print("Quitting ( ❛ ︵ ❛ )")
+            load_animation()
             sys.exit()
         else:
-            print("Enter a Valid Input!")
+            print("Enter a Valid Input! ( ͡❛ ⏥ ͡❛ )")
             print("Running Again!")
             mainMenu()
 
@@ -74,54 +75,80 @@ def mainMenu():
 # Dice Roller
 def diceRoller():
      print("\n")
-     print("<-- ROLLING DICE -->")
+     print("<------ ROLLING DICE (• ‿ •)--->\n")
      number = random.randint(1, 6)
-     print(f"Number is: {number}")
-     print(f"---------------")
+     print(f"       Number is: {number}")
+     print(f"-----------------------------")
      Recall(1)
 
 
 # Guessing The Number Game
 def guessingNumber():
      print("\n")
+     print("<-----------Guess The Number--------->\n")
      print("This is a Random Number Guessing game.")
      print("Range of numbers is from 1 to 10.")
+     print("--------------------------------------\n")
      number = random.randint(1, 10)
-     user = input("Guess Number: ")
+     user = input("Make a Guess: ")
 
      try:
           if int(user) == number:
+               print("( ͡• ‿ ͡•)")
                print("Hurray!!")
                print(f"you guessed the number right it's {number}")
 
           else:
                if int(user) > 10 or int(user) < 1:
-                    print("Enter Within range")
+                    print("Enter Within range!!!")
                elif int(user) != number and int(user) <= 10 and int(
                     user) >= 1:
+                    print("( ͡• ᴗ ͡•)👎")
                     print(f"You guessed wrong number.The number was {number}")
      except:
-          print("Invalid Input.\n")
-
+          print("Invalid Input.( ͡❛ ⏥ ͡❛)👎\n")
      Recall(2)
 
 
 # Random Password
 def randPassword():
      try:
-          print("Random Password Generator:")
-          passlen = int(input("Enter the length of password: "))
-          s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
-          if passlen >= 1 and passlen < 30:
-               p = "".join(random.sample(s, passlen))
-               print(p)
+          print("<- ( * ‿ * )Random Password Generator ->\n")
+          print("R. To Generate Password.")
+          print("H. To View Saved Password.")
+          userInp = input("Your Choice: ")
+          f = open("./password.txt", "a+")
+          if userInp == "R" or userInp == "r":     
+               print("<- ( * ‿ * )Random Password Generator ->\n")
+               passlen = int(input("Enter the length of password: "))
+               print("-------------------------------------------")
+               s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+               if passlen >= 1 and passlen < 30:
+                    p = "".join(random.sample(s, passlen))
+                    print(f"Your password is {p}")
+                    print("<-- Passwords Generator --> \n")
+                    f.write(f"Password is : {p}\n")
+                    print("Your password is saved in Password.txt file.")               
+               else:
+                    print("Please Enter Length Between (1 - 30)")
+                    print("Running Again.....")
+          elif userInp == "H" or userInp == "h":
+                    print("Your Password History ->\n")
+                    f.seek(0) 
+                    data = f.read()
+                    print(data)
+                    f.close()
           else:
-               print("please enter length between (1 - 30)")
-               print("Running again.....")
+               print("Invalid Input.")
+               print("Running Again.")
+               randPassword()
 
      except:
-          print("Invalid Input!")
+          print("Invalid Input!( ͡❛ ⏥ ͡❛)👎")
           print("Running Again..... \n")
+     
+     finally:
+          f.close()
 
      Recall(3)
 
@@ -131,29 +158,30 @@ def Recall(flagTemp):
      print("-----------------------------------")
      print("Enter 'A' or 'a' to run again")
      print("Enter 'M' or 'm' for Main menu")
-     print("Enter 'E' or 'e' to Exit")
-     print("-----------------------------------")
-     dis = input("Enter :")
+     print("Press Any Other Key to Exit")
+     print("-----------------------------------\n")
+     dis = input("Enter (͠≖ ͜ʖ͠≖): ")
      if dis == "A" or dis == "a":
           reCallChoice(flagTemp)
      elif dis == "M" or dis == "m":
-          print("going home!")
+          print("going home!( ▀̿ ̿ _⦣ ▀̿ ̿  )\n")
+          load_animation()
           mainMenu()
-     elif dis == "E" or dis == "e":
-          print("Bye!")
-          sys.exit()    
      else:
-        print("Invalid Input!")
-        print("Running again!")
-        Recall()
+          print("Bye! ( ❛ ︵ ❛ )")
+          load_animation()
+          sys.exit()    
 
 # Flag Calling Function
 def reCallChoice(flag):
      if flag == 1:
+          print("Running Again!\n")
           diceRoller()
      elif flag == 2:
+          print("Running Again!\n")
           guessingNumber()
      elif flag == 3:
+          print("Running Again!\n")
           randPassword()
 
 # main function
