@@ -158,16 +158,16 @@ def randPassword():
 
 def calculator():
      def sum(x, y):
-          return x + y;
+          return x + y 
 
      def sub(x,y):
-          return x - y;
+          return x - y 
 
      def multi(x, y):
-          return x * y;
+          return x * y 
 
      def division(x,y):
-          return x / y;
+          return x / y 
      print("<--------- Basic Calculator --------->\n")
      print("Select Your Operation: ")
      print("Enter 'A' or 'a' for addition.")
@@ -180,8 +180,8 @@ def calculator():
           dis = input("Enter the operation: ")
 
           if dis in ("a","A","s","S","m","M","d","D"):
-               num1 = int(input("Enter First number: "));
-               num2 = int(input("Enter Second number: "));
+               num1 = int(input("Enter First number: ")) 
+               num2 = int(input("Enter Second number: ")) 
 
                if dis == "A" or dis == "a":
                     print(f"{num1} + {num2} = {sum(num1,num2)}")
