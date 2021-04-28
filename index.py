@@ -44,10 +44,11 @@ def mainMenu():
         # !conditions
         print("-------------- MAIN MENU ---------------- \n")
         print("Hi (◠‿◠) , What do you want me to do? ")
-        print("Enter 'A or a' Dice roll.")
-        print("Enter 'B or b' Guessing the number game.")
-        print("Enter 'C or c' Random password generator.")
-        print("Enter 'E or e' Exit")
+        print("Enter 'A' or 'a' Dice roll.")
+        print("Enter 'B' or 'b' Guessing the number game.")
+        print("Enter 'C' or 'c' Random password generator.")
+        print("Enter 'D' or 'd' calculator.")
+        print("Enter 'E' or 'e' Exit")
         print("-----------------------------------------")
 
         # !choose
@@ -62,6 +63,9 @@ def mainMenu():
         elif choose == "C" or choose == "c":
             load_animation()
             randPassword()
+        elif choose == "D" or choose == "d":
+            load_animation()
+            calculator()
         elif choose == "E" or choose == "e":
             print("Quitting ( ❛ ︵ ❛ )")
             load_animation()
@@ -152,6 +156,51 @@ def randPassword():
 
      Recall(3)
 
+def calculator():
+     def sum(x, y):
+          return x + y;
+
+     def sub(x,y):
+          return x - y;
+
+     def multi(x, y):
+          return x * y;
+
+     def division(x,y):
+          return x / y;
+     print("<--------- Basic Calculator --------->\n")
+     print("Select Your Operation: ")
+     print("Enter 'A' or 'a' for addition.")
+     print("Enter 'S' or 's' for Subtraction.")
+     print("Enter 'M' or 'm' for Multiplication.")
+     print("Enter 'D' or 'd' for Division.")
+     print("-------------------------------------")
+
+     try:
+          dis = input("Enter the operation: ")
+
+          if dis in ("a","A","s","S","m","M","d","D"):
+               num1 = int(input("Enter First number: "));
+               num2 = int(input("Enter Second number: "));
+
+               if dis == "A" or dis == "a":
+                    print(f"{num1} + {num2} = {sum(num1,num2)}")
+               elif dis == "S" or dis == "s":
+                    print(f"{num1} - {num2} = {sub(num1,num2)}")
+               elif dis == "M" or dis == "m":
+                    print(f"{num1} * {num2} = {multi(num1,num2)}")
+               elif dis == "D" or dis == "d":
+                    if num2 == 0:
+                         print("Can't divide by 0. ")
+                    else:
+                         print(f"{num1} / {num2} = {division(num1,num2)}")
+          else:
+               print("Invalid input!!")
+
+     except:
+          print("Invalid Input!!")
+     Recall(4)
+
 # Recall
 def Recall(flagTemp):
      print("\n")
@@ -183,6 +232,9 @@ def reCallChoice(flag):
      elif flag == 3:
           print("Running Again!\n")
           randPassword()
+     elif flag == 4:
+          print("Running Again!\n")
+          calculator()
 
 # main function
 def main():
