@@ -19,26 +19,26 @@ It has the various features:
 
 ### Main Menu
 
-\_![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/main%20menu.png?raw=true)
+![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/main%20menu.png?raw=true)
 
 ### Dice Roller
 
-\_![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/Dice%20Roll.png?raw=true)
+![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/Dice%20Roll.png?raw=true)
 
 ### Number Guessing Game
 
-\_![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/Guess%20the%20number.png?raw=true)
+![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/Guess%20the%20number.png?raw=true)
 
 ### Password Generator
 
-\_![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/password%20gen.png?raw=true)
+![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/password%20gen.png?raw=true)
 
-\_![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/password%20hist.png?raw=true)
+![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/password%20hist.png?raw=true)
 
 ### Basic Calculator
 
-\_![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/cal.png?raw=true)
+![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/cal.png?raw=true)
 
 ### Pytests
 
-\_![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/pytest.png?raw=true)
+![](https://github.com/Ayushrwork/oneForAll/blob/master/Media/pytest.png?raw=true)
